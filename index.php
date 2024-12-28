@@ -38,6 +38,17 @@ foreach ($xml->item as $item) {
 document.addEventListener('DOMContentLoaded', function() {
     // Get the select element
     var select = document.getElementById('mySelect');
+
+    // Seçim değiştiğinde çalışacak bir event ekliyoruz
+    select.addEventListener('change', function() {
+        // Seçilen değeri alıyoruz
+        var selectedOption = select.options[select.selectedIndex];
+        var selectedValue = selectedOption.value;
+        var selectedText = selectedOption.text;
+
+        // Seçilen değeri div içinde gösteriyoruz
+        document.getElementById('selectedValue').innerHTML = 'Seçilen ID: ' + selectedValue + ' - ' + selectedText;
+    });
 });
 </script>
 
