@@ -18,15 +18,11 @@ foreach ($xml->item as $item) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>jQuery UI Selectbox ve PHP SimpleXML</title>
-    <!-- jQuery ve jQuery UI'yi dahil ediyoruz -->
-    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <title>Selectbox ve PHP SimpleXML</title>
 </head>
 <body>
 
-<h2>PHP ve jQuery UI Selectbox Kullanımı</h2>
+<h2>PHP Selectbox Kullanımı</h2>
 
 <!-- Select box'ı oluşturuyoruz -->
 <select id="mySelect">
@@ -38,11 +34,10 @@ foreach ($xml->item as $item) {
     ?>
 </select>
 
-<!-- jQuery UI Selectmenu ile select kutusunu güzelleştiriyoruz -->
 <script>
-$(document).ready(function() {
-    // jQuery UI Selectmenu ile güzelleştiriyoruz
-    $("#mySelect").selectmenu();
+document.addEventListener('DOMContentLoaded', function() {
+    // Get the select element
+    var select = document.getElementById('mySelect');
 });
 </script>
 
